@@ -7,16 +7,18 @@ var _ = require('lodash');
 // 		Stockholm: [16,14,12,15,13,14,14,12,11,14,15,14],
 // 		Warsaw:    [17,15,16,18,20,20,21,18,19,18,17,20] }
 
-var result = {
-	hot: [],
-	warm: []
-};
-
 var checkTemp = function (temperature) {
-	return temperature > 19;
+		return temperature > 19;
 };
 
 var worker = function (collection) {
+	var result = {
+		hot: [],
+		warm: []
+	};
+
+	if(_.isEmpty(collection)) return result;
+
 	_.forEach(collection, function(town, townname) {
 		if(_.every(town, checkTemp)) {
 			result.hot.push(townname);
