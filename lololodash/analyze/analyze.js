@@ -1,19 +1,37 @@
 var _ = require('lodash');
 
 var worker = function (freelancerList) {
-	var totalIncome;
-	var freelancerRatings = [];
-	//calculate average income across all freelancers
-	var avgIncome = _.forEach(freelancerList, function (freelancer) {
-		totalIncome += freelancer.income;
-	});
+	if(_.isEmpty(freelancerList)) return freelancerList;
 
-	return freelancerRatings.push({
-		average: avgIncome
-	});
+	var avg;
+	var underperform;
+	var overperform;
+
+	freelancerList = _.sortBy(freelancerList, 'income');
+
+	var total = _.reduce(freelancerList, function(sum, item) {
+		return sum + item.income;
+	}, 0);
+
+	avg = total / freelancerList.length;
 
 	//group freelancers by underpeform (< then avgIncome) and overperform (> then avgIncome)
+	underperform = _.filter(freelancerList, function(item){
+		return item.income <= avg;
+	});
 
+	overperform = _.filter(freelancerList, function(item){
+		return item.income > avg;
+	});
+
+	return {
+		average: avg,
+		underperform: underperform,
+		overperform: overperform
+	};
+};
+
+module.exports = worker;
 
 // * Sorts the freelancers within the two groups by their income with the lowest first.
 // * Returns an Object in the following form:
@@ -28,6 +46,3 @@ var worker = function (freelancerList) {
 //           { "name": "foo", "income": 302 }
 //       ]
 //   }
-};
-
-module.exports = worker;
