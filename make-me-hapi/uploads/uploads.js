@@ -21,7 +21,7 @@ var uploadHandler = function(request, reply) {
 			headers: request.payload.file.hapi.headers
 		}
 	};
-		reply(JSON.stringify(result));
+	reply(JSON.stringify(result));
 	});
 };
 
