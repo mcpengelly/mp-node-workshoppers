@@ -1,4 +1,5 @@
 var hapi = require('hapi');
+var boom = require('boom');
 var server = new hapi.Server();
 
 server.connection({
@@ -26,10 +27,11 @@ var getCookieHandler = function (req, reply) {
 	var session = req.state.session;
 	var result;
 
-	if(session || session.key){
+	if(session){
 		result = { user: 'hapi' };
 	} else {
-		//optional part
+		//optional portion
+		result = boom.unauthorized('you dont have the correct authorization');
 	}
 
 	reply(result);
