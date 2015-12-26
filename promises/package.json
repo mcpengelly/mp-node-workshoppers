@@ -9,6 +9,7 @@
   "author": "matt pengelly",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^3.10.1",
     "q": "^1.4.1"
   }
 }
