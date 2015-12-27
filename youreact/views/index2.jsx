@@ -1,12 +1,20 @@
 import React from 'react';
 
 export default class TodoBox extends React.Component {
-// Omitted
+	render() {
+		return(
+			<div className="TodoBox">
+				<TodoList />
+				<Todo />
+				<TodoForm />
+			</div>
+		);
+	}
 }
 
-var TodoList = React.CreateClass({
-render() {
-return (
+var TodoList = React.createClass({
+render: function() {
+	return (
 		<div className="todoList">
 			<table style={{border: "2px solid black"}}>
 				<tbody>
@@ -19,18 +27,18 @@ return (
 	}
 });
 
-var Todo = React.CreateClass({
-	render() {
+var Todo = React.createClass({
+	render: function() {
 		return (
-
+			<td>todo</td>
 		);
 	}
 });
 
-var TodoForm = React.CreateClass({
-	render() {
+var TodoForm = React.createClass({
+	render: function() {
 		return (
-
+			<td>form</td>
 		);
 	}
 });
