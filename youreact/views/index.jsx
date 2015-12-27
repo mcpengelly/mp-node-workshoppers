@@ -7,31 +7,29 @@ export default class TodoBox extends React.Component {
 				<h1>Todos</h1>
 				<TodoList />
 				<TodoForm />
-				<input id='content'></input>
 			</div>
 		);
 	}
 }
 
-class TodoList extends React.Component {
-// Write code here
-}
-
-class TodoForm extends React.Component {
-// Write code here
-}
-
-// tutorial1.js
-var CommentBox = React.createClass({
-  render: function() {
-    return (
-      <div className="commentBox">
-        Hello, world! I am a CommentBox.
-      </div>
-    );
-  }
+//react components below
+//todo list class that renders a div with some content when it finds the class
+var TodoList = React.createClass({
+	render: function() {
+		return (
+			<div className='todoList'>
+				I am a TodoList.
+			</div>
+		);
+	}
 });
-ReactDOM.render(
-  <CommentBox />,
-  document.getElementById('content')
-);
+
+var TodoForm = React.createClass({
+	render: function() {
+		return (
+			<div className='todoForm'>
+				I am a TodoForm.
+			</div>
+		);
+	}
+});
