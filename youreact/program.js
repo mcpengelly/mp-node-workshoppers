@@ -11,7 +11,7 @@ require('babel/register')({
 });
 
 app.use('/', function(req, res) {
-	res.render('index2', '');
+	res.render('index2', ''); //make sure to change this if you want to render a different view.
 });
 
 app.listen(app.get('port'), function() {});
