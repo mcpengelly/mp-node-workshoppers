@@ -1,6 +1,5 @@
 var q = require('q');
 var defer = q.defer();
-var temp = process.argv[2];
 
 var error = new Error("REJECTED!");
 
