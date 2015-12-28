@@ -1,7 +1,6 @@
 {
   "name": "youreact",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.3"
-  }
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-google": "^0.3.0",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-standard": "^1.3.1"
+  },
+  "description": ""
 }
