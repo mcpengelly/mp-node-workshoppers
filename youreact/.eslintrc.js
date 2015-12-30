@@ -2,7 +2,8 @@ module.exports = {
 	'ecmaFeatures': {
 		'jsx': true,
 		'modules': true,
-		'classes': true
+		'classes': true,
+		'blockBindings': true
 	},
 	'globals': {
 
