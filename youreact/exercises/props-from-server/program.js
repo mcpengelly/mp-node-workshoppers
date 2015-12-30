@@ -12,7 +12,6 @@ require('babel/register')({
 
 var arg1 = process.argv[3];
 var arg2 = process.argv[4];
-console.log(arg1, arg2);
 
 // data the server is going to send the client
 var data = [
