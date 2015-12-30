@@ -13,13 +13,18 @@ export default class TodoBox extends React.Component {
 }
 
 var TodoList = React.createClass({
-	render: function() {
-		return (
-			<div className='todoList'>
-				I am a TodoList.
-			</div>
-		);
-	}
+  render: function () {
+  return (
+    <div className="todoList">
+      <table style={{border: "2px solid black"}}>
+        <tbody>
+          <Todo title="Shopping">Milk</Todo>
+          <Todo title="Hair cut">13:00</Todo>
+        </tbody>
+      </table>
+    </div>
+    );
+  }
 });
 
 class Todo extends React.Component {
@@ -28,22 +33,23 @@ class Todo extends React.Component {
 		this.state = {checked: false};
 	}
 
-handleChange(e) {
-	this.setState({checked: e.target.checked});
-}
+	handleChange(e) {
+		this.setState({checked: e.target.checked});
+	}
 
-render() {
-	return (
-		<tr>
-			<td style={{border: "1px solid black"}}>
-				<input type="checkbox" checked={this.state.checked} onChange={this.handleChange}/>
-			</td>
-				<td style={{border: "1px solid black"}}>{this.props.title}</td>
-				<td style={{border: "1px solid black"}}>{this.props.children}</td>
-		</tr>
+	render() {
+		return (
+			<tr>
+				<td style={{border: "1px solid black"}}>
+					<input type="checkbox" checked={this.state.checked} onChange={this.handleChange}/>
+				</td>
+					<td style={{border: "1px solid black"}}>{this.props.title}</td>
+					<td style={{border: "1px solid black"}}>{this.props.children}</td>
+			</tr>
 		);
 	}
 }
+
 Todo.propTypes = {
 	title: React.PropTypes.string.isRequired
 };
