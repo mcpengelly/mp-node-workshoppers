@@ -62,10 +62,10 @@ class Todo extends React.Component {
 		return (
 			<tr style={this.state.TodoStyle}>
 				<td style={style.tableContent}>
-				<input
-					type="checkbox"
-					checked={this.state.checked}
-					onchange={this.handleChange}/>
+					<input
+						type="checkbox"
+						checked={this.state.checked}
+						onchange={this.handleChange}/>
 				</td>
 				<td style={style.tableContent}>{this.props.title}</td>
 				<td style={style.tableContent}>{this.props.children}</td>
