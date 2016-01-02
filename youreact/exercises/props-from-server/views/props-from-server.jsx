@@ -2,7 +2,7 @@ import React from 'react';
 
 let borderThin = {
 	tableContent: {
-		border: "1px solid black"
+		border: '1px solid black'
 	}
 };
 
@@ -29,7 +29,7 @@ class TodoList extends React.Component {
 		});
 		return (
 			<div className = "todoList">
-				<table style={{border: "2px solid black"}}>
+				<table style={{border: '2px solid black'}}>
 					<tbody>
 						{todo}
 					</tbody>
