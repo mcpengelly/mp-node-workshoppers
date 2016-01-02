@@ -1,5 +1,11 @@
 import React from 'react';
 
+let borderThin = {
+	tableContent: {
+		border: "1px solid black"
+	}
+};
+
 export default class TodoBox extends React.Component {
 	render() {
 		return (
@@ -14,7 +20,13 @@ export default class TodoBox extends React.Component {
 
 class TodoList extends React.Component {
 	render() {
-		var todo = this.props.data.map(function(obj) { return <Todo title={obj.title} key={obj.title}>{obj.detail}</Todo>});
+		var todo = this.props.data.map(function(obj) {return (
+			<Todo key={obj.title}
+				title={obj.title}
+			>
+				{obj.detail}
+			</Todo>);
+		});
 		return (
 			<div className = "todoList">
 				<table style={{border: "2px solid black"}}>
@@ -41,7 +53,10 @@ class Todo extends React.Component {
 		return (
 			<tr>
 				<td style={borderThin.tableContent}>
-					<input type="checkbox" checked={this.state.checked} onChange={this.handleChange}/>
+					<input checked={this.state.checked}
+						onChange={this.handleChange}
+						type="checkbox"
+					/>
 				</td>
 					<td style={borderThin.tableContent}>{this.props.title}</td>
 					<td style={borderThin.tableContent}>{this.props.children}</td>
@@ -49,10 +64,6 @@ class Todo extends React.Component {
 		);
 	}
 }
-
-Todo.propTypes = {
-	// Omitted
-};
 
 class TodoForm extends React.Component {
 	render () {
@@ -63,15 +74,3 @@ class TodoForm extends React.Component {
 		);
 	}
 }
-
-let borderThin = {
-	tableContent: {
-		border: "1px solid black"
-	}
-};
-
-let borderThick = {
-	tableContent: {
-		border: "2px solid black"
-	}
-};
