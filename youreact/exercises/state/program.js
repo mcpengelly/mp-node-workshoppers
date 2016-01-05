@@ -10,10 +10,10 @@ require('babel/register')({
   ignore: false
 });
 
-app.use('/', function(req, res) {
+app.use('/', function (req, res) {
   // make sure to change below
   // if you want to render a different view.
   res.render('state', '');
 });
 
-app.listen(app.get('port'), function() {});
+app.listen(app.get('port'), function () {});

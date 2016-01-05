@@ -7,13 +7,12 @@ app.set('views', __dirname + '/views');
 app.engine('jsx', require('express-react-views').createEngine({ transformViews: false }));
 
 require('babel/register')({
-	ignore: false
+  ignore: false
 });
 
-app.use('/', function(req, res) {
-	//make sure to change below
-	//if you want to render a different view.
-	res.render('props', '');
+app.use('/', function (req, res) {
+  // make sure to change below if you want to render a different view.
+  res.render('props', '');
 });
 
-app.listen(app.get('port'), function() {});
+app.listen(app.get('port'), function () {});
