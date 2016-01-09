@@ -21,7 +21,7 @@ export default class TodoBox extends React.Component {
     return (
       <div className="todoBox">
         <h1>Todos</h1>
-        <TodoList data={this.props.data} />
+        <TodoList />
         <TodoForm />
       </div>
     );
@@ -30,21 +30,14 @@ export default class TodoBox extends React.Component {
 
 class TodoList extends React.Component {
   render () {
-    var todo = this.props.data.map(function (obj) {
-      <Todo key={obj.title} title={obj.title}>
-        {obj.details}
-      </Todo>;
-    });
-
     return (
       <div className="todoList">
-        <h1>List of Todos</h1>
         <table>
-          <tbody>{todo}</tbody>
+          <tbody>
+            <Todo title="Shopping">Milk</Todo>
+            <Todo title="Hair cut">13:00</Todo>
+          </tbody>
         </table>
-        <ul>
-          <li>{todo}</li>
-        </ul>
       </div>
     );
   }
@@ -53,8 +46,8 @@ class TodoList extends React.Component {
 // sometimes react components are wrapped in a div with a className
 // property defined as a camelcase version of the class's name
 class Todo extends React.Component {
-  constructor (properties) {
-    super(properties);
+  constructor (props) {
+    super(props);
     this.state = { complete: false };
   }
   handleChange (ev) {
