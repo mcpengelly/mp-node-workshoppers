@@ -27,7 +27,7 @@ class TodoList extends React.Component {
         </Todo>);
     });
     return (
-      <div className = "todoList">
+      <div className="todoList">
         <table style={{border: '2px solid black'}}>
           <tbody>
           {todo}
@@ -51,14 +51,14 @@ class Todo extends React.Component {
   render () {
     return (
       <tr>
-      <td style={borderThin.tableContent}>
-      <input checked={this.state.checked}
-      onChange={this.handleChange}
-      type="checkbox"
-      />
-      </td>
-      <td style={borderThin.tableContent}>{this.props.title}</td>
-      <td style={borderThin.tableContent}>{this.props.children}</td>
+        <td style={borderThin.tableContent}>
+          <input checked={this.state.checked}
+          onChange={this.handleChange}
+          type="checkbox"
+          />
+        </td>
+        <td style={borderThin.tableContent}>{this.props.title}</td>
+        <td style={borderThin.tableContent}>{this.props.children}</td>
       </tr>
     );
   }
