@@ -1,5 +1,5 @@
 // creating a react view
-// add react dependency
+// add react dependency so the parser knows how to parse this file
 
 import React from 'react';
 
@@ -13,15 +13,17 @@ import React from 'react';
 //   }
 // }
 
-
-
 // inside the render functions youre able to specify expressions in curly braces, it allows you to put html inside your js
 //
 
 export default class TodoBox extends React.Component {
   render () {
     return (
-      <TodoList/>
+      <div className="todoBox">
+        <h1>Todos</h1>
+        <TodoList data={this.props.data} />
+        <TodoForm />
+      </div>
     );
   }
 }
@@ -35,7 +37,7 @@ class TodoList extends React.Component {
     });
 
     return (
-      <div>
+      <div className="todoList">
         <h1>List of Todos</h1>
         <table>
           <tbody>{todo}</tbody>
@@ -52,23 +54,36 @@ class TodoList extends React.Component {
 // property defined as a camelcase version of the class's name
 class Todo extends React.Component {
   constructor (properties) {
-    this.super(properties);
+    super(properties);
     this.state = { complete: false };
   }
   handleChange (ev) {
-    this.setState({ ev.properties.complete });
+    this.setState({ complete: ev.target.complete });
   }
   render () {
     return (
+      <tr>
+        <td>
+          <input complete={this.state.complete}
+            onChange={this.handleChange}
+            type="checkbox"
+          />
+        </td>
+
+      </tr>
     );
   }
 }
+
+Todo.propTypes = {
+  title: React.PropTypes.string.isRequired
+};
 
 class TodoForm extends React.Component {
   render () {
     return (
       <div className="todoForm">
-        <p>I am a todo form.</p>
+        I am a todo form.
       </div>
     );
   }
