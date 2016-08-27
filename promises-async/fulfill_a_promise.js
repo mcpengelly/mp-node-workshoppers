@@ -1,5 +1,4 @@
 // require('es6-promise');
-
 'use strict'
 
 var promise = new Promise(function(resolve, reject){

@@ -1,1 +1,1 @@
-#using bluebird promise library for async code
+#using es6 promises for async code
