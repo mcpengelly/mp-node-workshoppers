@@ -10,8 +10,4 @@ function onReject(err) {
 	console.log(err.message);
 }
 
-var onReject = function(err){
-	console.log(err.message)
-}
-
 promise.then(null, onReject);
