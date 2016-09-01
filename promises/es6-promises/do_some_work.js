@@ -20,7 +20,7 @@ HTTP.read(req1)
 			return HTTP.read(req2)
 		})
 		.then(function(user){
-			return user.toString();
+			return JSON.parse(user)//.toString();
 		})
 		.then(console.log)
 		.then(null, console.log)//err handling
