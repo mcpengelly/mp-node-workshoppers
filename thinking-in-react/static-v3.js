@@ -2,11 +2,13 @@ import React from 'react'
 
 export const FilterableProductTable = React.createClass({
 		render() {
+			var products = this.props.products;
+
 				return (
-						<div>
-							<SearchBar/>
-							<ProductTable/>
-						</div>
+					<div>
+						<SearchBar/>
+						<ProductTable products={products}/>
+					</div>
 				)
 		}
 })
@@ -14,20 +16,28 @@ export const FilterableProductTable = React.createClass({
 export const SearchBar = React.createClass({
 	render() {
 		return (
-			<div>Im a searchbar</div>
+			<form>
+				<input type='search' placeholder='search...'></input>
+				<label>
+				<input type='checkbox'></input>
+					only show products in stock
+				</label>
+			</form>
 		)
 	}
 })
 
 export const ProductTable = React.createClass({
 		render() {
-				return (
-					<div>
-							<h1>product table</h1>
-							<ProductCategoryRow/>
-							<ProductCategoryRow/>
-					</div>
-				)
+			const products = this.props.products;
+			const rows = [];
+			let currentCategory;
+
+			products.forEach((product) => {
+			})
+			return (
+
+			)
 		}
 })
 
@@ -35,8 +45,7 @@ export const ProductCategoryRow = React.createClass({
 		render() {
 				return (
 					<table>
-						<ProductRow product='something'></ProductRow>
-						<ProductRow product='somethingElse'></ProductRow>
+
 					</table>
 				)
 		}
@@ -45,8 +54,7 @@ export const ProductCategoryRow = React.createClass({
 export const ProductRow = React.createClass({
 		render() {
 				return (
-					<tr>{this.props.product}</tr>
-					// <tr>{this.props.}</tr>
+					<tr>{this.props.product} : {this.props.price}</tr>
 				)
 		}
 })
