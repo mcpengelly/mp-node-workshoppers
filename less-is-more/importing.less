@@ -1,0 +1,18 @@
+// » Write a stylesheet, variables.less, that defines two variables:   »
+//  @padding with a value set to 10px
+//     » @margin with a value set to 5%
+
+// » Write another stylesheet that:   » Imports the variables stylesheet.
+//        » Defines a ruleset, .card,
+//  that sets the value of padding to @padding;
+//          the value of margin
+//  to @margin and the value of color to #111111.
+
+
+//variables_2.less import
+@import "variables_2";
+.card {
+	margin: @margin;
+	padding: @padding;
+	color: #111111;
+}

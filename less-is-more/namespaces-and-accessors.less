@@ -1,0 +1,16 @@
+// » Defines a namespace #header-styles.
+// » Defines the mixin .header-lg that sets the value of the font-size to
+// 32px. This mixin should be defined in the #header-styles namespace.
+// » Defines the ruleset .page-header that sets the color to #111111 and
+// uses the .header-lg mixin.
+
+#header-styles {
+	.header-lg {
+		font-size: 32px;
+	}
+}
+
+.page-header {
+	color: #111111;
+	#header-styles > .header-lg;
+}

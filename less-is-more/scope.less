@@ -1,0 +1,15 @@
+// » Defines a variable @padding and sets its value to 0.01 in percent. Use
+//   the percentage function.
+// » Defines a ruleset .card.
+// » Defines a variable @padding within the .card ruleset and sets its value
+//   to 10px.
+// » Defines a .footer ruleset within the .card ruleset and sets its padding
+//   to @padding.
+
+@padding: percentage(0.01);
+.card {
+	@padding: 10px;
+	.footer {
+		padding: @padding;
+	}
+}

@@ -1,0 +1,16 @@
+// » Defines a variable @container-margin and sets its value to 20px.
+// » Defines a ruleset .container that sets the margin to @container-margin.
+// » The .container ruleset should set the margin to half (1 / 2) of
+//   @container-margin when the maximum width is 480px.
+
+@container-margin: 20px;
+
+.container {
+	margin: @container-margin;
+}
+
+@media (max-width: 480px) {
+	.container {
+		margin: (@container-margin / 2);
+	}
+}

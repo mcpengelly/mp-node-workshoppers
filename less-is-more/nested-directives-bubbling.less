@@ -1,0 +1,16 @@
+   // » Defines the ruleset .screen-color that sets the text color to #212121
+   //   when the media is 'screen' using nesting.
+   // » The .screen-color ruleset should set the text color to #333333 when the
+   //   media is 'screen' and the minimum width is 768px using nesting.
+
+.screen-color {
+	@media screen {
+		color: #212121;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.screen-color {
+		color: #333333;
+	}
+ }
