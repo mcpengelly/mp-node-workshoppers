@@ -33,10 +33,31 @@ export const ProductTable = React.createClass({
 			const rows = [];
 			let currentCategory;
 
+			//each product gets it own ProductCategoryRow and Product row
 			products.forEach((product) => {
-			})
-			return (
+	      if (product.category !== currentCategory) {
+          currentCategory = product.category;
 
+	        rows.push((
+            <ProductCategoryRow key={currentCategory} category={currentCategory} />
+          ));
+	      }
+	      rows.push((
+					<ProductRow name={product.name} product={product} />
+				));
+			});
+			return (
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						{rows}
+					</tbody>
+				</table>
 			)
 		}
 })
@@ -44,9 +65,7 @@ export const ProductTable = React.createClass({
 export const ProductCategoryRow = React.createClass({
 		render() {
 				return (
-					<table>
-
-					</table>
+					<tr><b>{this.props.category}</b></tr>
 				)
 		}
 })
@@ -54,7 +73,7 @@ export const ProductCategoryRow = React.createClass({
 export const ProductRow = React.createClass({
 		render() {
 				return (
-					<tr>{this.props.product} : {this.props.price}</tr>
+					<tr>Product: {this.props.product.name} | Price: {this.props.product.price}</tr>
 				)
 		}
 })
