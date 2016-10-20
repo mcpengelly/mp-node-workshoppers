@@ -1,5 +1,8 @@
 import React from 'react'
 
+// filterText
+// inStockOnly
+
 export const FilterableProductTable = React.createClass({
 		render() {
 			var products = this.props.products;
