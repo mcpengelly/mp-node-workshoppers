@@ -1,0 +1,88 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "perfschool",
+        "scope": null,
+        "escapedName": "perfschool",
+        "name": "perfschool",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/matthewpengelly/Documents/batcave/perf"
+    ]
+  ],
+  "_from": "perfschool@latest",
+  "_id": "perfschool@1.0.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/perfschool",
+  "_nodeVersion": "2.3.4",
+  "_npmUser": {
+    "name": "bevacqua",
+    "email": "nicolasbevacqua@gmail.com"
+  },
+  "_npmVersion": "2.12.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "perfschool",
+    "scope": null,
+    "escapedName": "perfschool",
+    "name": "perfschool",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/perfschool/-/perfschool-1.0.3.tgz",
+  "_shasum": "0aa8895dbe310df3c114815ecbf3084bc35fe305",
+  "_shrinkwrap": null,
+  "_spec": "perfschool",
+  "_where": "/Users/matthewpengelly/Documents/batcave/perf",
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "nicolasbevacqua@gmail.com",
+    "url": "http://bevacqua.io/"
+  },
+  "bin": {
+    "perfschool": "./perfschool.js"
+  },
+  "bugs": {
+    "url": "https://github.com/bevacqua/perfschool/issues"
+  },
+  "dependencies": {
+    "express": "4.12.3",
+    "localtunnel": "^1.8.1",
+    "psi": "^2.0.4",
+    "serve-static": "1.9.2"
+  },
+  "description": "Find your way through the performance optimization maze in this NodeSchool workshopper",
+  "directories": {},
+  "dist": {
+    "shasum": "0aa8895dbe310df3c114815ecbf3084bc35fe305",
+    "tarball": "https://registry.npmjs.org/perfschool/-/perfschool-1.0.3.tgz"
+  },
+  "gitHead": "5aa7a1de7be505eea9ac097707adb28e85d3e732",
+  "homepage": "https://github.com/bevacqua/perfschool",
+  "license": "MIT",
+  "main": "perfschool.js",
+  "maintainers": [
+    {
+      "name": "bevacqua",
+      "email": "nicolasbevacqua@gmail.com"
+    }
+  ],
+  "name": "perfschool",
+  "optionalDependencies": {},
+  "preferGlobal": true,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bevacqua/perfschool.git"
+  },
+  "scripts": {},
+  "version": "1.0.3"
+}
