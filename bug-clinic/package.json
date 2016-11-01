@@ -15,6 +15,7 @@
     "eslint-plugin-standard": "^2.0.1"
   },
   "dependencies": {
-    "bunyan": "^1.8.4"
+    "bunyan": "^1.8.4",
+    "stackup": "^1.0.1"
   }
 }
