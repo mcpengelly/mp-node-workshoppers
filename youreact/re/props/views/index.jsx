@@ -31,8 +31,8 @@ class Todo extends React.Component {
 	render() {
 		return (
 			<tr>
-				<td>{this.props.title}</td>
-				<td>{this.props.children}</td>
+				<td style={{border: "1px solid black"}}>{this.props.title}</td>
+				<td style={{border: "1px solid black"}}>{this.props.children}</td>
 			</tr>
 		)
 	}
@@ -40,6 +40,6 @@ class Todo extends React.Component {
 
 class TodoForm extends React.Component {
 	render() {
-		return <div>TodoForm</div>
+		return <div className="todoForm">I am a TodoForm.</div>
 	}
 }
